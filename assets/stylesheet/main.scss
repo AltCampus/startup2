@@ -1,0 +1,275 @@
+// import css reset
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// import styling variables
+
+
+// modules
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img {
+    width: 100%;
+}
+
+.btn {
+    display: block;
+    font-size: 1rem;
+    width: 8rem;
+    padding: .5rem;
+    margin: 1rem 0;
+    border-radius: .8rem;
+    background: green;
+    color: white;
+}
+
+// header 
+.header {
+    padding: 1rem;
+    box-shadow: 5px 0 20px rgba(87, 87, 87, .1);
+    
+
+    .header-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        vertical-align: center;
+
+
+        // logo
+        .logo {
+            color: #705ecf;
+            font-size: 32px;
+            font-weight: 600;
+
+            h1, i {
+            display: inline-block;
+            }
+        }
+
+
+        // menu
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            li {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+// banner
+
+.banner {
+    padding: 4vw 0;
+
+    .banner-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 7vw; 
+    }
+}
+
+
+// mid
+.mid {
+    padding: 5rem;
+    background: #f8f9fa;
+
+    .mid-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 'mid-grid-one mid-grid-two mid-grid-three';
+
+        .mid-grid-one,
+        .mid-grid-two,
+        .mid-grid-three {
+            padding: 4em 4em;
+            box-shadow: 5px 7px 23px 0px rgba(58, 52, 82, 0.16);
+            text-align: center;
+        }
+
+        .mid-grid-one {
+            grid-area: mid-grid-one;
+        }
+
+        .mid-grid-two {
+            grid-area: mid-grid-two;
+        }
+
+        .mid-grid-three {
+            grid-area: mid-grid-three;
+        }
+    }
+}
+
+
+// experience
+.exp {
+    padding: 5rem;
+
+    .exp-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+
+        .exp-content {
+            ul {
+                list-style-type: disc;
+            }
+        }
+    }
+}
+
+// services
+.services {
+    background: #f8f9fa;
+    text-align: center;
+    padding: 3rem 0;
+
+    .services-content{
+        padding: 4rem 0;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        background: white;
+
+        .business-growth,
+        .fin-planning,
+        .business-services {
+            text-align: center;
+
+            //remove this for styling
+            height: 40vh;
+            padding: 1rem;
+        }
+        .fin-planning,
+        .business-services {
+            margin-right: 1rem;
+        }
+    }
+}
+
+// facts
+.facts {
+    .facts-grid {
+        display: grid;
+        grid-template-columns: 43% 55%;
+        grid-template-rows: auto;
+
+    }
+}
+
+// Partner
+.partners {
+    text-align: center;
+    padding: 3rem 0;
+    background: url("../images/inner.png") no-repeat;
+    background-size: cover;
+
+    .partners-content {
+        text-align: center;
+        
+        h3 {
+            color: #111;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        p {
+            max-width: 800px;
+            font-size: 1rem;
+            margin: 1rem auto 3rem auto;
+        }
+    }
+
+    .partners-grid {
+        padding: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        
+        .fa-angellist,
+        .fa-opencart,
+        .fa-lastfm,
+        .fa-openid,
+        .fa-skyatlas,
+        .fa-ravelry {
+            font-size: 3rem;
+        }
+
+        h4 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+
+}
