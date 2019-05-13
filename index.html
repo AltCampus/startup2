@@ -39,6 +39,13 @@
                     </div> <!-- logo ends here -->
                 
                     <!-- main navigational menu -->
+                    <label for="checkbox" class="toggle">
+                        <div>
+                            Menu
+                        </div>
+                    </label>
+                    <input type="checkbox" id="checkbox" hidden />
+
                     <div class="main-nav">
                         <nav>
                             <ul class="menu">
@@ -57,14 +64,40 @@
                                         Pricing
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="">
-                                        Dropdown
-                                        <span>
-                                            <i class="fas fa-angle-down"></i>
-                                        </span>
-                                    </a>
+
+                                <li class="dropdown">
+                                    Dropdown
+                                    <span >
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+
+                                    <!-- dropdown content -->
+                                    <div class="dropdown-content">
+                                        <a href="">
+                                            Services
+                                        </a>
+                                        <a href="">
+                                            FAQs
+                                        </a>
+                                        <a href="">
+                                            404
+                                        </a>
+                                        <a href="">
+                                            Statistics
+                                        </a>
+                                        <a href="">
+                                            Why Choose Us?
+                                        </a>
+                                        <a href="">
+                                            Our Team
+                                        </a>
+                                        <a href="">
+                                            Partners
+                                        </a>
+                                    </div>
+                                    <!-- dropdown content ends here -->
                                 </li>
+
                                 <li>
                                     <a href="">
                                         Contact Us
@@ -72,31 +105,39 @@
                                 </li>
                             </ul>
                         </nav>
-                    </div> <!-- main nav ends here -->
+                    </div> 
+                    <!-- main nav ends here -->
                 
-                    <!-- search -->
-                    <div class="search">
-                        <form action="" class="search-form">
-                            <input type="search" name="" id="search-bar" placeholder="search here...">
-                            <label for="search-bar"></label>
-                            <button type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </form>
-                    </div>
-                
-                    <!-- download -->
-                    <div class="download">
-                        <a href="">
-                            <i class="fas fa-cloud-download-alt"></i>
-                        </a>
+                    <div>
+                        <!-- search -->
+                        <div class="search">
+                            <form action="" class="search-form">
+                                <input type="search" name="" id="search-bar" placeholder="Search here...">
+                                <label for="search-bar"></label>
+                                <button type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <!-- search ends here -->
+                        
+                        <!-- download -->
+                        <div class="download">
+                            <a href="">
+                                <i class="fas fa-cloud-download-alt"></i>
+                            </a>
+                        </div>
+                        <!-- download ends here -->
                     </div>
                 </div>
+                <!-- header-flex ends here -->
             </header>
-            
+
             <!-- banner -->
             <div class="banner">
                 <div class="container">
+
+                    <!-- banner-grid starts here -->
                     <div class="banner-grid">
                         <div class="banner-content">
                             <h1>
@@ -111,12 +152,18 @@
                                 Sed ut perspiciatis unde omnis iste natus doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
                                 veritatis et quasi.
                             </p>
-                        </div>
 
+                            <a href="" class="btn">
+                                Read More
+                            </a>
+                        </div>
+                        <!-- banner content ends here-->
+
+                        <!-- banner image starts here -->
                         <div class="banner-img">
                             <img src="assets/images/banner.png" alt="">
                         </div>
-                    </div>
+                    </div> <!-- banner-grid ends here -->
                 </div> <!-- container ends here -->
             </div> <!-- banner ends here -->
 
@@ -125,6 +172,8 @@
         <!-- middle section -->
         <div class="mid">
             <div class="container">
+
+                <!-- middle section's grid starts here -->
                 <div class="mid-grid">
                     <div class="mid-grid-one">
                         <img src="assets/images/img1.png" alt="">
@@ -134,7 +183,7 @@
                         <p>
                             Ut enim ad minim veniam, quis nostrud.Excepteur sint occaecat cupidatat non proident
                         </p>
-                        <a href="#" class="btn">Read more</a>
+                        <a href="#" >Read more</a>
                     </div>
 
                     <div class="mid-grid-two">
@@ -145,7 +194,7 @@
                         <p>
                             Ut enim ad minim veniam, quis nostrud.Excepteur sint occaecat cupidatat non proident
                         </p>
-                        <a href="#" class="btn">Read more</a>
+                        <a href="#">Read more</a>
                     </div>
 
                     <div class="mid-grid-three">
@@ -156,7 +205,7 @@
                         <p>
                             Ut enim ad minim veniam, quis nostrud.Excepteur sint occaecat cupidatat non proident
                         </p>
-                        <a href="#" class="btn">Read more</a>
+                        <a href="#">Read more</a>
                     </div>
                 </div>
             </div> <!-- container ends here -->
@@ -165,13 +214,15 @@
         <!-- experience -->
         <div class="exp">
             <div class="container">
+
+                <!-- experience grid start -->
                 <div class="exp-grid">
                     <div class="exp-content">
                         <h5>
                             Business Consultancy
                         </h5>
                         <h1>
-                            25 Years of Industry Experience
+                            25 Years of Industry <br> Experience
                         </h1>
                         <p>
                             Integer pulvinar leo id viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel,
@@ -220,9 +271,11 @@
 
                 <div class="services-grid">
                     <div class="business-growth">
-                        <i class="fas fa-chart-line"></i>
+                        <div class="bg-i-bg">
+                            <i class="fas fa-chart-line"></i>
+                        </div>                     
                         <h1>
-                            Financial planning
+                            Business Growth
                         </h1>
                         <p>
                             Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.
@@ -230,7 +283,9 @@
                     </div> 
 
                     <div class="fin-planning">
-                        <i class="fas fa-dollar-sign"></i>
+                        <div class="fp-i-bg">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
                         <h1>
                             Financial Planning
                         </h1>
@@ -240,7 +295,9 @@
                     </div>
 
                     <div class="business-services">
-                        <i class="far fa-lightbulb"></i>
+                        <div class="bs-i-bg">
+                            <i class="far fa-lightbulb"></i>
+                        </div>
                         <h1>
                             Business services
                         </h1>
@@ -267,7 +324,7 @@
                                 Some of Company Real Facts
                             </h3>
                             <p>
-                                Excepteur sint occaecat cupidatat
+                                Excepteur sint occaecat cupidatat <br>
                                 non proident.
                             </p>
                             <p>
@@ -276,7 +333,7 @@
                         </div> <!-- content text ends here -->
 
                         <div class="stats">
-                            <stats-grid>
+                            <div class="stats-grid">
                                 <div class="pc">
                                     <h4>
                                         1000+
@@ -331,7 +388,7 @@
                                     </p>
                                 </div>
 
-                            </stats-grid>
+                            </div> <!-- stats grid ends here -->
                         </div>
                     </div> <!-- facts content ends here -->
                 </div> <!-- facts grid ends here -->
@@ -414,9 +471,54 @@
 
         </div>
 
-        <!-- footer -->
-        <div class="footer">
+        <!--subscribe section  -->
+        <section class="subscribe">
+            <div class="subscribe-wrapper">
 
-        </div>
+                <div class="subscribe-logo">
+                    <i class="fas fa-envelope"></i>
+                </div> <!-- logo ends here -->
+        
+                <div class="subscribe-text">
+                    <h1 class="subscribe-h1 h1">
+                        Stay Updated!
+                    </h1>
+                    <p class="subscribe-para Para">
+                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    </p>
+                    <div class="input-div">
+                        <input type="text" name="" value="" class="subscribe-input" placeholder="Enter your email...">
+                        <button class="subscribe-btn" type="button" name="button">
+                            Subscribe
+                        </button>
+                    </div> <!-- input div ends here -->
+                </div> <!-- subscribe-text ends here -->
+            </div> <!-- wrapper ends here -->
+        </section>
+        
+        <!-- footer section -->
+        
+        <footer class="footer">
+            <div class="social-icons">
+                <ul>
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-google-plus-g"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                </ul>
+            </div>
+        
+            <small class="small">
+                &copy; 2019 startup. All rights reserved | Designed by <span>w3layouts</span>
+            </small>
+        
+            <div class="teleport-container">
+                <a href="#" class="teleport">
+                    <i class="fas fa-level-up-alt"></i>
+                </a>
+            </div>
+        
+        </footer>
+
     </body>
 </html>
