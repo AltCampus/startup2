@@ -83,6 +83,11 @@ img {
   letter-spacing: 0.0625rem;
   border-radius: 0.25rem;
   background-color: #05b993;
+  transition-delay: 0.1s;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #00ebac;
 }
 
 .toggle {
@@ -689,6 +694,12 @@ img {
   flex-direction: row;
   justify-content: space-between;
 }
+.contact-grid .contact-form .form-row button {
+  background-color: #705ecf !important;
+}
+.contact-grid .contact-form .form-row button:hover {
+  background-color: #9657f6 !important;
+}
 .contact-grid .contact-form label {
   letter-spacing: 0.5px;
   font-size: 15px;
@@ -711,6 +722,10 @@ img {
   line-height: 1.5;
   overflow: visible;
   text-align: left;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.contact-grid .contact-form input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 .contact-grid .contact-form textarea {
   background: #f8f9fa;
@@ -720,7 +735,6 @@ img {
   letter-spacing: 1px;
   font-size: 15px;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   height: 180px;
   resize: none;
   display: block;
@@ -728,6 +742,10 @@ img {
   line-height: 1.5;
   overflow: auto;
   text-align: left;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.contact-grid .contact-form textarea:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .map-container {
