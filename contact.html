@@ -34,13 +34,11 @@
                 </div> <!-- logo ends here -->
         
                 <!-- main navigational menu -->
-                <label for="drop" class="toggle">
-                    Menu
-                </label>
-                <input type="checkbox" name="drop" id="drop">
-        
                 <div class="main-nav">
                     <nav>
+                        <label for="drop" class="toggle">Menu</label>
+                        <input type="checkbox" id="drop" />
+        
                         <ul class="menu">
                             <li>
                                 <a href="index.html">
@@ -48,51 +46,59 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="about.html">
                                     About Us
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="pricing.html">
                                     Pricing
                                 </a>
                             </li>
         
-                            <li class="dropdown">
-                                Dropdown
-                                <span>
-                                    <i class="fas fa-angle-down"></i>
-                                </span>
-        
-                                <!-- dropdown content -->
-                                <div id="changetoflex" class="dropdown-content">
-                                    <a href="">
-                                        Services
-                                    </a>
-                                    <a href="">
-                                        FAQs
-                                    </a>
-                                    <a href="">
-                                        404
-                                    </a>
-                                    <a href="">
-                                        Statistics
-                                    </a>
-                                    <a href="">
-                                        Why Choose Us?
-                                    </a>
-                                    <a href="">
-                                        Our Team
-                                    </a>
-                                    <a href="">
-                                        Partners
-                                    </a>
-                                </div>
-                                <!-- dropdown content ends here -->
+                            <!-- dropdown -->
+                            <li>
+                                <!-- first tier dropdown -->
+                                <label for="drop-2" class="toggle toggle-2">
+                                    Dropdown
+                                    <span>
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                                </label>
+                                <a href="#">
+                                    Dropdown
+                                    <span>
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                                </a>
+                                <input type="checkbox" id="drop-2">
+                                <ul>
+                                    <li>
+                                        <a href="#services-link" class="drop-text">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html" class="drop-text">Faq's</a>
+                                    </li>
+                                    <li>
+                                        <a href="404.html" class="drop-text">404</a>
+                                    </li>
+                                    <li>
+                                        <a href="#stats-link" class="drop-text">Statistics</a>
+                                    </li>
+                                    <li>
+                                        <a href="about.html" class="drop-text">Why choose us?</a>
+                                    </li>
+                                    <li>
+                                        <a href="about.html" class="drop-text">Our team</a>
+                                    </li>
+                                    <li>
+                                        <a href="#partners-link" class="drop-text">Our partners</a>
+                                    </li>
+                                </ul>
                             </li>
         
                             <li>
-                                <a href="">
+                                <a href="contact.html">
                                     Contact Us
                                 </a>
                             </li>
@@ -101,13 +107,12 @@
                 </div>
                 <!-- main nav ends here -->
         
-                <div>
+                <div class="main-buttons">
                     <!-- search -->
                     <div class="search">
-                        <form action="" class="search-form">
-                            <input type="search" name="" id="search-bar" placeholder="Search here...">
-                            <label for="search-bar"></label>
-                            <button type="submit">
+                        <form action="#" class="search-form" method="post">
+                            <input type="search" class="search-bar" placeholder="Search here..." required="">
+                            <button type="submit" class="btn">
                                 <i class="fas fa-search"></i>
                             </button>
                         </form>
@@ -115,11 +120,9 @@
                     <!-- search ends here -->
         
                     <!-- download -->
-                    <div class="download">
-                        <a href="">
-                            <i class="fas fa-cloud-download-alt"></i>
-                        </a>
-                    </div>
+                    <a href="http://w3layouts.com/" target="_blank" class="btn download">
+                        <i class="fas fa-cloud-download-alt"></i>
+                    </a>
                     <!-- download ends here -->
                 </div>
             </div>
