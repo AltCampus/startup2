@@ -151,6 +151,12 @@ img {
 .header .header-flex .logo h1, .header .header-flex .logo i {
   display: inline-block;
 }
+.header .header-flex #drop {
+  display: none;
+}
+.header .header-flex #drop-2 {
+  display: none;
+}
 .header .header-flex .menu {
   display: flex;
   flex-direction: row;
@@ -249,7 +255,6 @@ img {
   display: inline-block;
   border: 0.0625rem solid transparent;
   padding: 0.4rem 0.75rem;
-  font-size: 1rem;
   line-height: 1.5;
 }
 .header .header-flex .main-buttons .download:hover {
@@ -258,8 +263,6 @@ img {
 }
 .header .header-flex .main-buttons .download a .fa-cloud-download-alt {
   color: #fff;
-  font-size: 1rem;
-  line-height: 1.75rem;
 }
 
 .banner {
@@ -862,6 +865,13 @@ img {
 @media only screen and (max-width: 650px) {
   html {
     font-size: 14px;
+  }
+}
+@media only screen and (max-width: 1060px) {
+  #drop:checked ~ .menu {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
   }
 }
 
