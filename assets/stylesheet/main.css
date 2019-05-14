@@ -125,6 +125,20 @@ img {
   }
 }
 
+.toggle-2 {
+  display: none;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1060px) {
+  .toggle-2 {
+    display: block;
+  }
+}
+
 .header {
   padding: 1rem 2rem;
   box-shadow: 0.3125rem 0 1.25rem rgba(87, 87, 87, 0.1);
@@ -138,8 +152,7 @@ img {
 }
 @media only screen and (max-width: 1060px) {
   .header .header-flex {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
   }
 }
 .header .header-flex .logo {
@@ -147,6 +160,7 @@ img {
   font-size: 2rem;
   font-weight: 600;
   text-shadow: 0.125rem 0.3125rem 0.1875rem rgba(0, 0, 0, 0.06);
+  align-self: flex-start;
 }
 .header .header-flex .logo h1, .header .header-flex .logo i {
   display: inline-block;
@@ -163,20 +177,28 @@ img {
   justify-content: space-between;
   list-style: none;
 }
+@media only screen and (max-width: 1060px) {
+  .header .header-flex .menu {
+    display: none;
+  }
+  .header .header-flex .menu .dropdown a {
+    display: none;
+  }
+}
 .header .header-flex .menu li {
   letter-spacing: 0.5px;
   margin: 0 0.875rem;
-}
-@media only screen and (max-width: 1060px) {
-  .header .header-flex .menu li {
-    display: none;
-  }
 }
 .header .header-flex .menu li:hover {
   color: #05b993 !important;
 }
 .header .header-flex .menu li:hover ul {
   display: block;
+}
+@media only screen and (max-width: 1060px) {
+  .header .header-flex .menu li:hover ul {
+    display: none;
+  }
 }
 .header .header-flex .menu li ul {
   display: none;
@@ -188,7 +210,6 @@ img {
   z-index: 9;
 }
 .header .header-flex .menu li ul li {
-  float: none;
   display: list-item;
   position: relative;
   border-radius: 4px;
@@ -208,8 +229,13 @@ img {
 .header .header-flex .main-buttons {
   display: flex;
 }
+@media only screen and (max-width: 1060px) {
+  .header .header-flex .main-buttons {
+    width: 100vw;
+    justify-content: center;
+  }
+}
 .header .header-flex .main-buttons .search {
-  display: flex;
   margin-top: 0.25rem;
   margin-right: 1rem;
   justify-content: center;
@@ -229,10 +255,6 @@ img {
   font-weight: 400;
   overflow: visible;
 }
-.header .header-flex .main-buttons .search form [type=search] {
-  outline-offset: -2px;
-  appearance: none;
-}
 .header .header-flex .main-buttons .search form button {
   background: #05b993;
   color: #fff;
@@ -249,13 +271,9 @@ img {
 .header .header-flex .main-buttons .download {
   display: border-box;
   background: #705ecf;
-  height: 1.7rem;
   border-radius: 0.25rem;
-  text-align: center;
   display: inline-block;
-  border: 0.0625rem solid transparent;
-  padding: 0.4rem 0.75rem;
-  line-height: 1.5;
+  padding: 0.8rem 0.75rem;
 }
 .header .header-flex .main-buttons .download:hover {
   background-color: #9657f6;
@@ -871,7 +889,40 @@ img {
   #drop:checked ~ .menu {
     display: flex !important;
     flex-direction: column;
+    min-width: 50vw;
     width: 100%;
+    align-self: flex-start;
+  }
+  #drop:checked ~ .menu li {
+    padding: 0.4rem;
+  }
+
+  #drop-2:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: static;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  #drop-2:checked ~ ul li {
+    display: list-item;
+    position: relative;
+    border-radius: 4px;
+  }
+  #drop-2:checked ~ ul li a {
+    color: black;
+    display: block;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    transition: 0.5s all;
+    margin-bottom: 0.5rem;
+  }
+  #drop-2:checked ~ ul li a:hover {
+    color: #00ebac;
   }
 }
 

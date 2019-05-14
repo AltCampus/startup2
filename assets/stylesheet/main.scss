@@ -73,6 +73,19 @@ img {
     }
 }
 
+.toggle-2 {
+    display: none;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 0;
+    cursor: pointer;
+
+    @media only screen and (max-width: 1060px) {
+        display: block;
+    }
+}
+
 // header 
 .header {
     padding: 1rem 2rem;
@@ -86,8 +99,7 @@ img {
         align-items: center !important;
 
         @media only screen and (max-width: 1060px) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
         }
         
 
@@ -97,6 +109,7 @@ img {
             font-size: 2rem;
             font-weight: 600;
             text-shadow: 0.125rem 0.3125rem 0.1875rem rgba(0, 0, 0, 0.06);
+            align-self: flex-start;
 
             h1, i {
             display: inline-block;
@@ -119,19 +132,29 @@ img {
                 justify-content: space-between;
                 list-style: none;
 
+                @media only screen and (max-width: 1060px) {
+                    display: none;
+
+                    .dropdown {
+                        a {
+                            display: none;
+                        }
+                    }
+                }
+
                 li {
                     letter-spacing: .5px;
                     margin: 0 0.875rem;
-
-                    @media only screen and (max-width: 1060px) {
-                        display: none;
-                    }
 
                     &:hover {
                         color: #05b993 !important;
 
                         ul {
                             display: block;
+
+                            @media only screen and (max-width: 1060px) {
+                                display: none;
+                            }
                         }
                     }
 
@@ -145,8 +168,6 @@ img {
                         z-index: 9;
 
                         li {
-                            // width: 170px;
-                            float: none;
                             display: list-item;
                             position: relative;
                             border-radius: 4px;
@@ -171,10 +192,14 @@ img {
 
         .main-buttons {
             display: flex;
+            
+            @media only screen and (max-width: 1060px) {
+                width: 100vw;
+                justify-content: center;
+            }
 
-                // search
+            // search
             .search {
-                display: flex;
                 margin-top: .25rem;
                 margin-right: 1rem;
                 justify-content: center;
@@ -193,11 +218,6 @@ img {
                         background: #f7f7f7;
                         font-weight: 400;
                         overflow: visible;
-                    }
-                        
-                    [type="search"] {
-                        outline-offset: -2px;
-                        appearance: none;
                     }
 
                     button {
@@ -222,14 +242,10 @@ img {
             .download {
                 display: border-box;
                 background: #705ecf;
-                height: 1.7rem;
                 border-radius: 0.25rem;
-                text-align: center;
                 display: inline-block;
-                border: 0.0625rem solid transparent;
-                padding: 0.4rem 0.75rem;
-                // font-size: 1rem;
-                line-height: 1.5;
+                padding: 0.8rem 0.75rem;
+                
                 
                 &:hover {
                     background-color: #9657f6;
@@ -238,9 +254,6 @@ img {
 
 
                 a {
-
-
-
                     .fa-cloud-download-alt {
                         color: #fff;
                     }
@@ -968,7 +981,44 @@ img {
     #drop:checked ~ .menu {
         display: flex !important;
         flex-direction: column;
+        min-width: 50vw;
         width: 100%;
+        align-self: flex-start;
+
+        li {
+            padding: .4rem;
+        }
+    }
+
+    #drop-2:checked ~ ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        position: static;        
+        background: white;
+        color: black;
+        padding: 10px;
+        border-radius: 4px;
+
+        li {
+            display: list-item;
+            position: relative;
+            border-radius: 4px;
+
+            a {
+                color: black;
+                display: block;
+                font-size: .9rem;
+                letter-spacing: .5px;
+                font-weight: 400;
+                transition: 0.5s all;
+                margin-bottom: 0.5rem;
+
+                &:hover {
+                    color: #00ebac;
+                }
+            }
+        }
     }
 }
-
