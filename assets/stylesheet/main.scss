@@ -12,10 +12,8 @@ body {
 }
 .container {
     max-width: 1100px;
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
-    margin-right: auto;
-    margin-left: auto;
+    padding: 0 0.9375rem;
+    margin: 0 auto;
 }
 a {
     text-decoration: none;
@@ -30,7 +28,6 @@ img {
 
 .btn {
     display: inline-block;
-
     padding: 0.875rem 1.625rem;
     border: none;
     color: #fff;
@@ -350,7 +347,6 @@ img {
         // .mid-grid-three {
         //     grid-area: mid-grid-three;
         // }
-
         img {
             max-width: 100%;
             width: 6rem;
